@@ -29,6 +29,6 @@ resource "aws_identitystore_group_membership" "default" {
     for group_member in local.group_members : "${group_member.group_display_name}-${group_member.member_id}" => group_member
   }
 
-  group_id  = aws_identitystore_group.default[each.value.group_display_name].id
+  group_id  = aws_identitystore_group.default[each.value.group_display_name].group_id
   member_id = each.value.member_id
 }
