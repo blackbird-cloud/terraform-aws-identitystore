@@ -19,13 +19,14 @@ resource "aws_identitystore_user" "default" {
   name {
     given_name       = each.value.given_name
     family_name      = each.value.family_name
-    middle_name      = each.value.middle_name
-    honorific_prefix = each.value.honorific_prefix
-    honorific_suffix = each.value.honorific_suffix
+    middle_name      = try(each.value.middle_name, null)
+    honorific_prefix = try(each.value.honorific_prefix, null)
+    honorific_suffix = try(each.value.honorific_suffix, null)
   }
 
   emails {
-    value = each.value.email
+    value   = each.value.email
+    primary = true
   }
 
   dynamic "phone_numbers" {
