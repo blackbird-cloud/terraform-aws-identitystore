@@ -1,11 +1,8 @@
-<!-- BEGIN_TF_DOCS -->
 [![blackbird-logo](https://raw.githubusercontent.com/blackbird-cloud/terraform-module-template/main/.config/logo_simple.png)](https://blackbird.cloud)
 
 ## Requirements
 
-| Name | Version |
-|------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1 |
+No requirements.
 
 ## Providers
 
@@ -36,4 +33,3 @@ Checkout our other :point\_right: [terraform modules](https://registry.terraform
 ## Copyright
 
 Copyright © 2017-2023 [Blackbird Cloud](https://blackbird.cloud)
-<!-- END_TF_DOCS -->
