@@ -2,3 +2,30 @@ formatter: "markdown"
 
 header-from: ./.config/header.md
 footer-from: ./.config/footer.md
+
+output:
+  file: ./README.md
+  mode: replace
+  template: |-
+    {{ .Content }}
+
+sections:
+  show:
+    - header
+    - footer
+
+content: |-
+  # AWS Identitystore Terraform module
+  A Terraform module which helps you create users and groups for your your AWS Identitystore. Read [this](https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html) page for more information.
+
+  {{ .Header }}
+
+  ## Example
+  ```hcl
+  {{ include "./example/main.tf" }}
+  ```
+  {{ include "./modules/users/README.md" }}
+
+  {{ include "./modules/groups/README.md" }}
+
+  {{ .Footer }}
