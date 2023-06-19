@@ -14,19 +14,19 @@ jobs:
         uses: terraform-docs/gh-actions@main
         with:
           working-dir: modules/users
-          output-method: replace
+          config-file: .config/terraform-docs.yml
           git-push: "true"
 
       - name: Render terraform (groups) docs and push changes back to PR
         uses: terraform-docs/gh-actions@main
         with:
           working-dir: modules/groups
-          output-method: replace
+          config-file: .config/terraform-docs.yml
           git-push: "true"
 
       - name: Render terraform docs and push changes back to PR
         uses: terraform-docs/gh-actions@main
         with:
           working-dir: .
-          output-method: replace
+          config-file: .config/terraform-docs.yml
           git-push: "true"
